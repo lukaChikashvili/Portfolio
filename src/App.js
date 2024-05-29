@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -13,6 +14,7 @@ function App() {
       </div>
       <Header />
      <Home />
+     <About />
 
     </div>
   );

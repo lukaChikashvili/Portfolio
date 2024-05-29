@@ -1,3 +1,4 @@
+import { MouseIcon } from 'lucide-react'
 import React from 'react'
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
           <h1 className='text-white ' style={{fontSize: '10rem'}}>&#402;</h1>
         <p className='text-white ' style={{fontSize: '10rem'}}>&#8317;</p>
         <div className='flex flex-col'>
-        <p className='text-white ' style={{fontSize: '7rem'}}> 
+        <p className='text-white ' style={{fontSize: '8rem'}}> 
         <span className='text-green-500'>Web</span> developer</p>
          <p className='w-full h-2 bg-white '></p>
          <div className='flex gap-12'>
@@ -22,6 +23,9 @@ const Home = () => {
          </div>
         <p className='text-white ' style={{fontSize: '10rem'}}>&#8318; </p>
        </div>
+
+       <MouseIcon className='absolute bottom-24 text-white mouse ' size={40}/>
+       <span className='absolute bottom-12 text-white  text-xl'>Scroll</span>
     </div>
   )
 }

@@ -33,3 +33,22 @@ body {
         background-color: #260d42;
     }
 }
+
+
+.mouse {
+    animation: mouseAnim 4s infinite;
+}
+
+@keyframes mouseAnim {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
