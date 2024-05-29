@@ -1,13 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #260d42;
+    background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+    animation: anime 120s infinite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes anime {
+    0% {
+        background-color: #260d42;
+    }
+
+    20% {
+        background-color: #450e45;
+    }
+
+    50% {
+        background-color: #105238;;
+    }
+
+    70% {
+        background-color: #665b11;
+    }
+
+    100% {
+        background-color: #260d42;
+    }
 }
