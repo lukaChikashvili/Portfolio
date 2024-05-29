@@ -2,6 +2,7 @@ import About from "./components/About";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import { Github, Linkedin, Mail } from 'lucide-react';
+import Skills from "./components/Skills";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Header />
      <Home />
      <About />
+     <Skills />
 
     </div>
   );

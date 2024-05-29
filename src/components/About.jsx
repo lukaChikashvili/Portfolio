@@ -40,6 +40,7 @@ const About = () => {
              I have built a solid understanding of both front end and back end development.</p>
              </div>
              <p className=' left-48 ml-64 h-0.5 bg-white rotate-90 absolute -bottom-96 -mb-48' style={{width: '700px'}}></p>
+             <div className='flex flex-col gap-4 w-full'>
 <div className='flex flex-col  gap-4 w-full pt-12 pl-16 '>
     <div className='flex items-center gap-4'>
      <Circle className='text-white' />
@@ -61,7 +62,30 @@ const About = () => {
       </div>
      </div>
 </div>
-           
+
+
+<div className='flex flex-col  gap-4 w-full pt-12 pl-16 '>
+    <div className='flex items-center gap-4'>
+     <Circle className='text-white' />
+    <img src = "https://media.licdn.com/dms/image/C4D0BAQEfjm3n_xsB4g/company-logo_200_200/0/1669118298177/cyberassociation_logo?e=1724889600&v=beta&t=g-qx5uFkMfw6U1Jz3JZtt0DZkReFBHSFAuER69sIKA0" 
+    className='w-12 h-12 rounded-full shadow-lg shadow-[#191919] cursor-pointer'/>
+
+     <a href='https://scsa.ge/en/' target='_blank'><h2 className='text-white text-2xl underline-offset-8 cursor-pointer duration-500 ease-in hover:underline ' >Scientific Cyber Security Association </h2></a>
+   
+     </div>
+
+     <div className='flex flex-col gap-4'>
+     <h1 className='text-green-500 font-bold text-3xl'>March, 2023 &#8722; july, 2023</h1>
+     <div className='flex gap-4 text-white'>
+     <p className='text-3xl text-white'>Successfully finished <span className='text-green-500'>Front End development</span> course</p>
+     
+      </div>
+
+     </div>
+</div>
+
+</div>
+
              </div>
     </div>
   )
