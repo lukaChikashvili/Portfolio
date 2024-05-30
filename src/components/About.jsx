@@ -25,10 +25,10 @@ const About = () => {
 
 
   return (
-    <div className='min-h-screen p-28 '>
+    <div className='min-h-screen p-4 md:p-28 '>
           <h1 className='text-6xl text-green-500'>About me</h1>
       <div className='w-full bg-white h-1'></div>
-        <div className='flex justify-between gap-12 '>
+        <div className='flex flex-col md:flex-row justify-between gap-12 '>
     
 <div className='flex flex-col w-full  '>
       <p className='text-white text-3xl  pt-12'>Hello! my name is Luka, a passionate and dedicated web developer eager to start my professional 
@@ -39,7 +39,7 @@ const About = () => {
          <p className='text-white text-3xl  pt-12'>Over the past few years, I have immersed myself in the exciting field of web development. I have honed my skills in HTML, CSS, JavaScript, and various modern frameworks and libraries such as React, Vue.js, and Node.js. Through self-directed projects, online courses, and coding bootcamps,
              I have built a solid understanding of both front end and back end development.</p>
              </div>
-             <p className=' left-48 ml-64 h-0.5 bg-white rotate-90 absolute -bottom-96 -mb-48' style={{width: '700px'}}></p>
+             <p className='hidden md:block left-48 ml-64 h-0.5 bg-white rotate-90 absolute -bottom-96 -mb-48' style={{width: '700px'}}></p>
              <div className='flex flex-col gap-4 w-full'>
 <div className='flex flex-col  gap-4 w-full pt-12 pl-16 '>
     <div className='flex items-center gap-4'>
