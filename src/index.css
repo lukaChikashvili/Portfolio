@@ -9,7 +9,8 @@ body {
                                                 
     background-color: #260d42;
     background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
-    animation: anime 360s infinite;
+    animation: anime 500s infinite;
+    scroll-behavior: smooth;
 }
 
 @keyframes anime {

@@ -25,7 +25,7 @@ const About = () => {
 
 
   return (
-    <div className='min-h-screen p-4 md:p-28 '>
+    <section id = "about" className='min-h-screen p-4 md:p-28  '>
           <h1 className='text-6xl text-green-500'>About me</h1>
       <div className='w-full bg-white h-1'></div>
         <div className='flex flex-col md:flex-row justify-between gap-12 '>
@@ -87,7 +87,7 @@ const About = () => {
 </div>
 
              </div>
-    </div>
+    </section>
   )
 }
 
