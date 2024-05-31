@@ -59,8 +59,6 @@ const Home = () => {
          className='text-white ' style={{fontSize: '10rem'}}>&#8318; </motion.p>
        </div>
 
-       <MouseIcon className='absolute bottom-24 text-white mouse ' size={40}/>
-       <span className='absolute bottom-12 text-white  text-xl'>Scroll</span>
     </section>
   )
 }

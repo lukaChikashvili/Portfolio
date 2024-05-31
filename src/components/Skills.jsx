@@ -11,27 +11,43 @@ import redux from '../assets/redux.png';
 import figma from '../assets/figma.png';
 import git from '../assets/git.png';
 import mui from '../assets/mui.png';
+import { motion } from 'framer-motion';
 
 const Skills = () => {
+  const images = [
+    {id: 1, img: html},
+    {id: 2, img: css},
+    {id: 3, img: js},
+    {id: 4, img: react},
+    {id: 5, img: types},
+    {id: 6, img: node},
+    {id: 7, img: mongo},
+    {id: 8, img: three},
+    {id: 9, img: redux},
+    {id: 10, img: figma},
+    {id: 11, img: git},
+    {id: 12, img: mui}
+    
+  ];
+
+
   return (
     <div className='min-h-screen p-28'>
-       <h1 className='text-6xl text-green-500'>Skills</h1>
-      <div className='w-full bg-white h-1'></div> 
+       <motion.h1 initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
+                     whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
+                     transition={{ duration: 1, delay: 0.8 }} 
+       className='text-6xl text-green-500'>Skills</motion.h1>
+      <motion.div initial = {{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)'}}
+                     whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
+                     transition={{ duration: 1.5, delay: 1.3 }}
+       className='w-full bg-white h-1'></motion.div> 
 
-      <div className='flex pt-12 gap-8 w-1/2 flex-wrap'>
-        <img src = {html}  className='w-24'/>
-        <img src = {css}  className='w-24'/>
-        <img src = {js}  className='w-24'/>
-        <img src = {react}  className='w-24'/>
-        <img src = {types}  className='w-24 rounded-md'/>
-        <img src = {node}  className='w-24 rounded-md'/>
-        <img src = {mongo} className='w-24 object-cover rounded-md'/>
-        <img src = {three} className='w-24 object-cover rounded-md'/>
-        <img src = {redux} className='w-24 object-cover rounded-md'/>
-        <img src = {figma} className='w-24 object-cover rounded-md'/>
-        <img src = {git} className='w-24 object-cover rounded-md'/>
-        <img src = {mui} className='w-24 object-cover rounded-md'/>
-      </div>
+      <motion.div initial = {{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 1, delay: 0.5}}
+      className='flex pt-12 gap-8 w-1/2 flex-wrap'>
+       {images.map((value, i) => (
+          <img key = {i} src = {value.img} className='w-24 object-cover'/>
+       ))}
+      </motion.div>
     </div>
   )
 }
