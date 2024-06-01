@@ -7,33 +7,15 @@
 body {
     font-family: 'Semur Free Trial', sans-serif;
                                                 
-    background-color: #260d42;
-    background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
-    animation: anime 500s infinite;
+    background-color:  #003366;
+    background-image: url("https://www.transparenttextures.com/patterns/bedge-grunge.png");
+
+
     scroll-behavior: smooth;
+    overflow-x:hidden;
+    
 }
 
-@keyframes anime {
-    0% {
-        background-color: #260d42;
-    }
-
-    20% {
-        background-color: #450e45;
-    }
-
-    50% {
-        background-color: #105238;;
-    }
-
-    70% {
-        background-color: #665b11;
-    }
-
-    100% {
-        background-color: #260d42;
-    }
-}
 
 
 .mouse {
@@ -85,7 +67,7 @@ a::after {
     transform-origin: 100% 50%;
     transform: translate3d(0, 200%, 0);
     transition: transform .3s ease-in-out;
-    color: #40A578;
+    color: #FFD700;
     
   }
   
@@ -107,3 +89,11 @@ a:hover span {
     transform: translate3d(0, -200%, 0);
   }
   
+
+
+  .htmlscreen iframe {
+    width: 1024px;
+    height: 670px;
+    border-radius: 10px;
+  }
+

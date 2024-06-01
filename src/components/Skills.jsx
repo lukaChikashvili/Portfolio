@@ -36,7 +36,7 @@ const Skills = () => {
        <motion.h1 initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1, delay: 0.8 }} 
-       className='text-6xl text-green-500'>Skills</motion.h1>
+       className='text-6xl text-[#FFD700]'>Skills</motion.h1>
       <motion.div initial = {{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1.5, delay: 1.3 }}

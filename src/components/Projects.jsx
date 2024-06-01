@@ -1,6 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import laptop from '../assets/laptop.png';
+import neo from '../assets/neo.png';
+import { ExternalLink } from 'lucide-react';
+
+
+
 
 const Projects = () => {
     const neotech = [
@@ -16,7 +21,7 @@ const Projects = () => {
         <motion.h1 initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1, delay: 0.8 }} 
-          className='text-6xl text-green-500'>Projects</motion.h1>
+          className='text-6xl text-[#FFD700]'>Projects</motion.h1>
 
 <motion.div initial = {{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
@@ -25,11 +30,22 @@ const Projects = () => {
 
 <div className='flex items-center justify-between px-12 pt-12'>
     <div className='flex  items-center justify-between gap-12'>
-        <div className='flex flex-col'>
+        <div className='flex flex-col w-1/2'>
+            <div className='flex items-center gap-12'>
         <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2 }} 
-        className='text-6xl text-green-500'>Neo Writers</motion.h1>
+        className='text-6xl text-[#FFD700]'>Neo Writers</motion.h1>
+         <div className='flex gap-8'>
+            <motion.button initial = {{ opacity: 0, translateY: 20}}
+                     whileInView={{ opacity: 1, translateY: 0 }}
+                     transition={{type: 'spring', duration: 1, delay: 2 }}
+            className='text-white text-2xl flex items-center gap-2 justify-center border-2 rounded-md py-1 px-4'><a href = "https://github.com/lukaChikashvili/neoWriters2" target='_blank' data-replace = 'Github'><span>Github</span></a><ExternalLink size={20} /></motion.button>
+            <motion.button  initial = {{ opacity: 0}}
+                     whileInView={{ opacity: 1}}
+                     transition={{type: 'spring', duration: 1, delay: 2.1 }} className='text-black text-2xl flex items-center gap-2 justify-center border-2 bg-[#FFD700] rounded-md py-1 px-4 duration-500 ease hover:bg-transparent'><a href='https://neowriters-front.onrender.com/'  target='_blank' data-replace = 'Live'><span>Live</span></a><ExternalLink size={20} /></motion.button>
+         </div>
+        </div>
         <motion.p initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2.2}} 
@@ -52,8 +68,19 @@ const Projects = () => {
           ))}
 </div>
         </div>
-        <img src = {laptop} />
+        
+               
+                        <motion.img initial = {{opacity: 0}}
+                     whileInView={{ opacity: 1 }}
+                     transition={{ duration: 1, delay: 0.8 }} src={laptop} className='absolute right-2 -z-10' style={{width: '900px'}} />
+                        <motion.img initial = {{opacity: 0}}
+                     whileInView={{ opacity: 1 }}
+                     transition={{  delay: 0.7 }} src = {neo} className='absolute w-96 right-64 rounded-md' style={{width: '400px', height: '250px'}}/>
+                      
+        
     </div>
+
+
 </div>
       
     </div>

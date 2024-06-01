@@ -18,7 +18,7 @@ const Header = () => {
          <motion.span initial = {{opacity: 0}}
                       whileInView={{opacity: 1}}
                       transition={{duration:1, delay: 1.6}}
-         className='text-3xl absolute top-10 '>Chikashvili <p className='text-xl -right-4 text-green-500 absolute -top-4'>Luka</p></motion.span>
+         className='text-3xl absolute top-10 '>Chikashvili <p className='text-xl -right-4 text-[#FFD700] absolute -top-4'>Luka</p></motion.span>
      
          </div>
        </div>

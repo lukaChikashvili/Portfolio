@@ -31,7 +31,7 @@ const About = () => {
           <motion.h1 initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1, delay: 0.8 }} 
-          className='text-6xl text-green-500'>About me</motion.h1>
+          className='text-6xl text-[#FFD700]'>About me</motion.h1>
       <motion.div initial = {{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1.5, delay: 1.3 }} 
@@ -79,12 +79,12 @@ const About = () => {
      <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1.2, delay: 2.2 }} 
-     className='text-green-500 font-bold text-3xl'>Feb, 2024 &#8722; April, 2024</motion.h1>
+     className='text-[#FFD700] font-bold text-3xl'>Feb, 2024 &#8722; April, 2024</motion.h1>
      <div className='flex gap-4 text-white'>
      <motion.p initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1.2, delay: 2.4 }} 
-     className='text-3xl text-white'>Successfully finished <span className='text-green-500'>Node js</span> course</motion.p>
+     className='text-3xl text-white'>Successfully finished <span className='text-[#FFD700]'>Node js</span> course</motion.p>
       <motion.span initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring' , delay: 3}}
@@ -125,12 +125,12 @@ const About = () => {
      <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1.2, delay: 3.1 }}
-     className='text-green-500 font-bold text-3xl'>March, 2023 &#8722; july, 2023</motion.h1>
+     className='text-[#FFD700] font-bold text-3xl'>March, 2023 &#8722; july, 2023</motion.h1>
      <div className='flex gap-4 text-white'>
      <motion.p initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1.2, delay: 3.3 }}
-     className='text-3xl text-white'>Successfully finished <span className='text-green-500'>Front End development</span> course</motion.p>
+     className='text-3xl text-white'>Successfully finished <span className='text-[#FFD700]'>Front End development</span> course</motion.p>
      
       </div>
 
