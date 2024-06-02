@@ -27,7 +27,7 @@ const About = () => {
 
 
   return (
-    <section id = "about" className='min-h-screen p-4 md:p-28  '>
+    <section id = "about" className='min-h-screen p-4 pt-36 md:pt-0 md:p-28  '>
           <motion.h1 initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1, delay: 0.8 }} 
@@ -56,7 +56,7 @@ const About = () => {
              <motion.p initial = {{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1.5, delay: 1.7 }} 
-             className='hidden md:block left-48 ml-64 h-0.5 bg-white rotate-90 absolute -bottom-96 -mb-48' style={{width: '700px'}}></motion.p>
+             className='hidden md:block left-48 ml-64 h-0.5 bg-white rotate-90 absolute -bottom-72 -mb-48' style={{width: '700px'}}></motion.p>
              <div className='flex flex-col gap-4 w-full'>
 <div className='flex flex-col  gap-4 w-full pt-12 pl-16 '>
     <div className='flex items-center gap-4'>

@@ -16,15 +16,15 @@ const MixMaster = () => {
   return (
     <div className='min-h-screen p-28'>
   
-<div className='flex items-center justify-between px-12 pt-12'>
+<div className='flex items-center justify-between md:px-12 px-12 pt-12'>
 <div className='flex  items-center justify-between gap-12'>
-    <div className='flex flex-col w-1/2'>
-        <div className='flex items-center gap-12'>
+    <div className='flex flex-col w-1/2 '>
+        <div className='flex flex-col md:flex-row items-center gap-12'>
     <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2 }} 
-    className='text-6xl text-[#FFD700]'>MixMaster</motion.h1>
-     <div className='flex gap-8'>
+    className='text-6xl text-[#FFD700] -ml-64 md:-ml-0'>MixMaster</motion.h1>
+     <div className='flex gap-8 -ml-60 mb-8 md:mb-0 md:ml-0'>
         <motion.button initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2 }}
@@ -37,7 +37,7 @@ const MixMaster = () => {
     <motion.p initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2.2}} 
-    className='text-white text-2xl mt-8'>Welcome to MixMaster, the cutting edge 3D software 
+    className='text-white text-2xl w-full -ml-20 md:mt-8 md:ml-0'>Welcome to MixMaster, the cutting edge 3D software 
     designed for artists, designers, and creators who want to bring their imagination to life 
     with ease and precision. Whether you are a seasoned professional or a budding enthusiast, 
     MixMaster provides a robust suite of tools to help you create stunning 3D models, 
@@ -46,11 +46,11 @@ const MixMaster = () => {
     <motion.p initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2.2}} 
-    className='text-white text-2xl mt-8'>Easily move your meshes in the 3D space
+    className='text-white text-2xl w-full md:w-full -ml-20 mt-4 md:mt-8 md:ml-0'>Easily move your meshes in the 3D space
      to the perfect spot. Our intuitive controls allow for smooth and precise adjustments, 
     enabling you to place elements exactly where they need to be in your scene.</motion.p>
 
-         <div className='flex gap-8 mt-8'>
+         <div className='grid grid-cols-2 md:grid-cols-5 gap-16 mt-8 -ml-16 md:-ml-0'>
       {neotech.map((value, i) => (
         
          <motion.button initial = {{ opacity: 0, translateY: 20}}
@@ -65,10 +65,10 @@ const MixMaster = () => {
            
                     <motion.img initial = {{opacity: 0}}
                  whileInView={{ opacity: 1 }}
-                 transition={{ duration: 1, delay: 0.8 }} src={laptop} className='absolute right-2 -z-10' style={{width: '900px'}} />
+                 transition={{ duration: 1, delay: 0.8 }} src={laptop} className='absolute right-2 -z-10 hidden md:block' style={{width: '900px'}} />
                     <motion.img initial = {{opacity: 0}}
                  whileInView={{ opacity: 1 }}
-                 transition={{  delay: 0.7 }} src = {mix} className='absolute w-96 right-64 rounded-md' style={{width: '400px', height: '250px'}}/>
+                 transition={{  delay: 0.7 }} src = {mix} className=' hidden md:block absolute w-96 right-64 rounded-md' style={{width: '400px', height: '250px'}}/>
                   
     
 </div>

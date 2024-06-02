@@ -28,15 +28,15 @@ const Projects = () => {
                      transition={{ duration: 1.5, delay: 1.3 }} 
       className='w-full bg-white h-1'></motion.div>
 
-<div className='flex items-center justify-between px-12 pt-12'>
+<div className='flex items-center justify-between md:px-12 pt-12 '>
     <div className='flex  items-center justify-between gap-12'>
-        <div className='flex flex-col w-1/2'>
-            <div className='flex items-center gap-12'>
+        <div className='flex flex-col w-full md:w-1/2 '>
+            <div className='flex flex-col md:flex-row items-center gap-12'>
         <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2 }} 
-        className='text-6xl text-[#FFD700]'>Neo Writers</motion.h1>
-         <div className='flex gap-8'>
+        className='text-6xl text-[#FFD700] -ml-28 md:-ml-0'>Neo Writers</motion.h1>
+         <div className='flex gap-8  mb-8  md:mb-0 md:ml-0 '>
             <motion.button initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2 }}
@@ -49,7 +49,7 @@ const Projects = () => {
         <motion.p initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2.2}} 
-        className='text-white text-2xl mt-8'>NeoWriters is a platform for aspiring authors and publishing enthusiasts. 
+        className='text-white text-2xl w-full mt-8 -ml-12 md:-ml-0'>NeoWriters is a platform for aspiring authors and publishing enthusiasts. 
             With NeoWriters, you can create and edit your book, design stunning book covers, and
              publish your work with ease. The app offers a seamless experience, allowing you to 
              download your finalized book and share it with the world. Engage with other writers 
@@ -57,13 +57,13 @@ const Projects = () => {
              of creators. Whether you are an experienced author or just starting out,
              NeoWriters provides the tools you need to bring your stories to life.</motion.p>
 
-             <div className='flex gap-8 mt-8'>
+             <div className='grid grid-cols-2 md:grid-cols-5 gap-16 mt-8 -ml-16 md:-ml-0'>
           {neotech.map((value, i) => (
             
              <motion.button initial = {{ opacity: 0, translateY: 20}}
              whileInView={{ opacity: 1, translateY: 0 }}
              transition={{type: 'spring', duration: 1, delay: i * 0.5 }} 
-             className='text-white flex items-center  justify-center text-2xl border-2 w-28 h-10 rounded-md ' key={value.id}><a data-replace = {value.data}><span>{value.name}</span></a></motion.button>
+             className='text-white flex  items-center  justify-center text-2xl border-2 w-28 h-10 rounded-md ' key={value.id}><a data-replace = {value.data}><span>{value.name}</span></a></motion.button>
              
           ))}
 </div>
@@ -72,10 +72,10 @@ const Projects = () => {
                
                         <motion.img initial = {{opacity: 0}}
                      whileInView={{ opacity: 1 }}
-                     transition={{ duration: 1, delay: 0.8 }} src={laptop} className='absolute right-2 -z-10' style={{width: '900px'}} />
+                     transition={{ duration: 1, delay: 0.8 }} src={laptop} className='absolute right-2 -z-10 hidden md:block' style={{width: '900px'}} />
                         <motion.img initial = {{opacity: 0}}
                      whileInView={{ opacity: 1 }}
-                     transition={{  delay: 0.7 }} src = {neo} className='absolute w-96 right-64 rounded-md' style={{width: '400px', height: '250px'}}/>
+                     transition={{  delay: 0.7 }} src = {neo} className='hidden md:block absolute w-96 right-64 rounded-md' style={{width: '400px', height: '250px'}}/>
                       
         
     </div>
