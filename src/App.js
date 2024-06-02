@@ -8,10 +8,45 @@ import SmoothScroll from "./components/SmoothScroll";
 import MixMaster from "./components/MixMaster";
 import EternalMemories from "./components/EternalMemories";
 import Forever from "./components/Forever";
+import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { useEffect } from "react";
 
 
 
 function App() {
+
+  const cursorSize = 20;
+  const mouse = {
+    x: useMotionValue(0),
+    y: useMotionValue(0)
+  };
+
+  const smoothOptions = {damping: 40, stiffness: 300, mass: 0.5};
+
+  const smoothMouse = {
+    x: useSpring(mouse.x, smoothOptions),
+    y: useSpring(mouse.y, smoothOptions)
+  };
+
+
+  const manageMouseMove = (e) => {
+    const {clientX, clientY} = e;
+    mouse.x.set(clientX - cursorSize / 2);
+    mouse.y.set(clientY - cursorSize / 2);
+
+  }
+
+  useEffect(() => {
+     window.addEventListener('mousemove', manageMouseMove);
+
+
+     return () => {
+      window.removeEventListener('mousemove', manageMouseMove);
+     }
+  }, [])
+  
+ 
+
 
   return (
     <div className="App">
@@ -29,6 +64,7 @@ function App() {
     <MixMaster />
     <EternalMemories />
     <Forever />
+    <motion.div style={{left: smoothMouse.x, top: smoothMouse.y}} className="cursor"></motion.div>
      </SmoothScroll>
     </div>
   );
