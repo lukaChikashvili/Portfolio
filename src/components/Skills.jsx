@@ -43,9 +43,9 @@ const Skills = () => {
        className='w-full bg-white h-1'></motion.div> 
 
       <motion.div initial = {{opacity: 0}} whileInView={{opacity: 1}} transition={{duration: 1, delay: 0.5}}
-      className='flex pt-12 gap-8 w-1/2 flex-wrap'>
+      className='grid grid-cols-2 md:flex pt-12 gap-12 w-full flex-wrap'>
        {images.map((value, i) => (
-          <img key = {i} src = {value.img} className='w-24 object-cover'/>
+          <img key = {i} src = {value.img} className='w-full md:w-24 object-cover'/>
        ))}
       </motion.div>
     </div>

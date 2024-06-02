@@ -23,8 +23,8 @@ const EternalMemories = () => {
         <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2 }} 
-        className='text-5xl md:text-6xl text-[#FFD700] -ml-64 md:-ml-0 '>Eternal Memories</motion.h1>
-         <div className='flex gap-8 -ml-60 mb-8 md:mb-0 md:ml-0'>
+        className='text-5xl md:text-6xl text-[#FFD700] '>Eternal Memories</motion.h1>
+         <div className='flex gap-8  mb-8  md:mb-0 md:ml-0'>
             <motion.button initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2 }}
@@ -37,7 +37,7 @@ const EternalMemories = () => {
         <motion.p initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2.2}} 
-        className='text-white text-2xl w-full md:w-full -ml-32 md:mt-8 md:ml-0'>Welcome to Eternal Memories, 
+        className='text-white text-2xl w-64 md:w-full -ml-12 md:-ml-0 mt-8'>Welcome to Eternal Memories, 
         your dedicated platform for commemorating the lives of your loved ones. 
         Create heartfelt biographies, share funeral locations, and view example
          memorials to draw inspiration. Our memory wall allows friends and family
@@ -48,7 +48,7 @@ const EternalMemories = () => {
     
       
     
-             <div className='flex  gap-8 mt-8 -ml-16 md:-ml-0'>
+             <div className='hidden md:flex  gap-8 mt-8 -ml-16 md:-ml-0'>
           {neotech.map((value, i) => (
             
              <motion.button initial = {{ opacity: 0, translateY: 20}}

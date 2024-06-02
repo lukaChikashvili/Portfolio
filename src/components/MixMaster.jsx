@@ -23,8 +23,8 @@ const MixMaster = () => {
     <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2 }} 
-    className='text-6xl text-[#FFD700] -ml-64 md:-ml-0'>MixMaster</motion.h1>
-     <div className='flex gap-8 -ml-60 mb-8 md:mb-0 md:ml-0'>
+    className='text-6xl text-[#FFD700] '>MixMaster</motion.h1>
+     <div className='flex gap-8  mb-8  md:mb-0 md:ml-0 '>
         <motion.button initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2 }}
@@ -37,7 +37,7 @@ const MixMaster = () => {
     <motion.p initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2.2}} 
-    className='text-white text-2xl w-full -ml-20 md:mt-8 md:ml-0'>Welcome to MixMaster, the cutting edge 3D software 
+    className='text-white text-2xl w-64 md:w-full -ml-12 md:-ml-0 mt-8 '>Welcome to MixMaster, the cutting edge 3D software 
     designed for artists, designers, and creators who want to bring their imagination to life 
     with ease and precision. Whether you are a seasoned professional or a budding enthusiast, 
     MixMaster provides a robust suite of tools to help you create stunning 3D models, 
@@ -46,11 +46,11 @@ const MixMaster = () => {
     <motion.p initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2.2}} 
-    className='text-white text-2xl w-full md:w-full -ml-20 mt-4 md:mt-8 md:ml-0'>Easily move your meshes in the 3D space
+    className='text-white text-2xl w-64 md:w-full -ml-12 mt-4 md:-ml-0'>Easily move your meshes in the 3D space
      to the perfect spot. Our intuitive controls allow for smooth and precise adjustments, 
     enabling you to place elements exactly where they need to be in your scene.</motion.p>
 
-         <div className='grid grid-cols-2 md:grid-cols-5 gap-16 mt-8 -ml-16 md:-ml-0'>
+         <div className='hidden md:flex gap-8 mt-8 -ml-16 md:-ml-0'>
       {neotech.map((value, i) => (
         
          <motion.button initial = {{ opacity: 0, translateY: 20}}

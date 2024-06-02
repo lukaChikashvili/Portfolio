@@ -35,7 +35,7 @@ const Projects = () => {
         <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2 }} 
-        className='text-6xl text-[#FFD700] -ml-28 md:-ml-0'>Neo Writers</motion.h1>
+        className='text-6xl text-[#FFD700] '>Neo Writers</motion.h1>
          <div className='flex gap-8  mb-8  md:mb-0 md:ml-0 '>
             <motion.button initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
@@ -49,7 +49,7 @@ const Projects = () => {
         <motion.p initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1, delay: 2.2}} 
-        className='text-white text-2xl w-full mt-8 -ml-12 md:-ml-0'>NeoWriters is a platform for aspiring authors and publishing enthusiasts. 
+        className='text-white text-2xl w-full mt-8 '>NeoWriters is a platform for aspiring authors and publishing enthusiasts. 
             With NeoWriters, you can create and edit your book, design stunning book covers, and
              publish your work with ease. The app offers a seamless experience, allowing you to 
              download your finalized book and share it with the world. Engage with other writers 
@@ -57,7 +57,7 @@ const Projects = () => {
              of creators. Whether you are an experienced author or just starting out,
              NeoWriters provides the tools you need to bring your stories to life.</motion.p>
 
-             <div className='grid grid-cols-2 md:grid-cols-5 gap-16 mt-8 -ml-16 md:-ml-0'>
+             <div className='hidden md:flex gap-8 mt-8 -ml-16 md:-ml-0'>
           {neotech.map((value, i) => (
             
              <motion.button initial = {{ opacity: 0, translateY: 20}}

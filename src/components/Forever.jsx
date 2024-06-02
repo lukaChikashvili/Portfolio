@@ -22,8 +22,8 @@ const Forever = () => {
     <motion.h1 initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2 }} 
-    className='text-5xl md:text-6xl text-[#FFD700] -ml-64 md:-ml-0'>Forever&#8330;</motion.h1>
-     <div className='flex gap-8 -ml-36 mb-8 md:mb-0 md:ml-0'>
+    className='text-5xl md:text-6xl text-[#FFD700] '>Forever&#8330;</motion.h1>
+     <div className='flex gap-8  mb-8  md:mb-0 md:ml-0'>
         <motion.button initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2 }}
@@ -36,14 +36,14 @@ const Forever = () => {
     <motion.p initial = {{ opacity: 0, translateY: 20}}
                  whileInView={{ opacity: 1, translateY: 0 }}
                  transition={{type: 'spring', duration: 1, delay: 2.2}} 
-    className='text-white text-2xl w-76 md:w-full -ml-32 md:mt-8 md:ml-0'>Discover Forever, the revolutionary perfume that transcends 
+    className='text-white text-2xl w-64 md:w-full -ml-12 md:-ml-0 mt-8'>Discover Forever, the revolutionary perfume that transcends 
     the ordinary. Our unique blend not only captivates the senses but also promises an eternal allure. With 
     Forever, each spritz whispers of immortality, granting you timeless elegance and everlasting charm. 
     Experience the essence of forever &minus; because with Forever, you do not just wear a fragrance, you live it.</motion.p>
 
  
 
-         <div className='flex  gap-8 mt-8 -ml-16 md:-ml-0'>
+         <div className='hidden md:flex  gap-8 mt-8 -ml-16 md:-ml-0'>
       {neotech.map((value, i) => (
         
          <motion.button initial = {{ opacity: 0, translateY: 20}}
