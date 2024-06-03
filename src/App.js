@@ -1,7 +1,7 @@
 import About from "./components/About";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import { ArrowBigLeft, Github, Linkedin, Mail, MoveLeft, MoveRight } from 'lucide-react';
+import { ArrowBigLeft, Github, Linkedin, Mail, MoveLeft, MoveRight, Sun } from 'lucide-react';
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import SmoothScroll from "./components/SmoothScroll";
@@ -9,7 +9,7 @@ import MixMaster from "./components/MixMaster";
 import EternalMemories from "./components/EternalMemories";
 import Forever from "./components/Forever";
 import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import {Canvas} from '@react-three/fiber';
 import Three from "./components/Three";
 import { Context } from "./context/Context";
@@ -23,7 +23,9 @@ function App() {
   
  const {showCards, setShowCards} = useContext(Context);
  
+ const [darkMode, setDarkMode] = useState(false);
 
+ let menuRef = useRef();
 
   useEffect(() => {
      
@@ -103,6 +105,27 @@ const handleRightClick = () => {
 const handleLeftClick = () => {
   setIndex((prevIndex) => (prevIndex - 1 + texts.length) % texts.length);
 };
+
+useEffect(() => {
+  
+  localStorage.setItem('darkMode', JSON.stringify(darkMode));
+
+  if (menuRef.current) {
+    document.body.style.backgroundColor = darkMode ? 'black' : '#003366'; 
+    menuRef.current.style.transition = "all 0.9s ease-in";
+    menuRef.current.style.backgroundColor = darkMode ? 'black' : '#003366';
+  }
+}, [darkMode, menuRef]);
+
+const toggleDarkMode = () => {
+  setDarkMode(!darkMode);
+};
+
+useEffect(() => {
+  const data = localStorage.getItem('darkMode');
+  setDarkMode(JSON.parse(data));
+}, []); 
+ 
   return (
     <div className="App">
       <SmoothScroll>
@@ -124,8 +147,8 @@ const handleLeftClick = () => {
     className="fixed z-10 bottom-4 right-8 text-white text-2xl duration-500 ease-in hover:text-[#FFD700]">{!showCards ? "Menu" : "X"}</button>}
 <AnimatePresence>
 {showCards && (
-  
- <motion.div initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
+
+ <motion.div ref={menuRef}  initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
  animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
  transition={{ duration: 1, delay: 0.8 }} exit={{clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
  className="card  fixed  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full min-h-screen  flex gap-24 justify-center items-center ">
@@ -145,6 +168,7 @@ const handleLeftClick = () => {
                      transition={{ duration: 1, delay: 0.8 }} 
 
           className='text-6xl text-[#FFD700] absolute bottom-12'>{texts[index]}</motion.h1>
+           <Sun onClick={toggleDarkMode} size={30} className="text-white absolute top-12 left-12 cursor-pointer duration-500 ease-in hover:text-[#FFD700] z-10" />
    <div className="canvas-container">
               <Canvas className="canvas">
                 <Three />
@@ -159,7 +183,7 @@ const handleLeftClick = () => {
 
 
 
-   
+
      </SmoothScroll>
     </div>
   );

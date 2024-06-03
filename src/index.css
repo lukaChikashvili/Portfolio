@@ -161,3 +161,11 @@ a:hover span {
     width: 1024px;
     height: 670px;
 }
+
+.dark {
+  background-color: black;
+}
+
+.light {
+  background-color: #003366;
+}

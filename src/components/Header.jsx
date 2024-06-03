@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion';
-import { Menu } from 'lucide-react';
+import { Menu, Sun } from 'lucide-react';
 
 const Header = () => {
   const time = new Date();
@@ -36,8 +36,9 @@ const Header = () => {
        </motion.nav>
 
        <Menu className='block md:hidden absolute right-8 duration-500 ease-in hover:text-[#FFD700]' size={30}/>
+       
+    <div className='hidden md:flex '>
 
-    <div className='hidden md:block'>
         <motion.a initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1.5, delay: 1.6 }} href = "#" data-replace = " Tbilisi"><span> Tbilisi</span></motion.a>
