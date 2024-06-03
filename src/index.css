@@ -156,3 +156,8 @@ a:hover span {
 }
 
 
+.htmlScreen iframe
+{
+    width: 1024px;
+    height: 670px;
+}
