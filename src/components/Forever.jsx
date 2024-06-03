@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import laptop from '../assets/laptop.png';
 import fors from '../assets/for.png';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github, Linkedin, Mail } from 'lucide-react';
 
 const Forever = () => {
     const neotech = [
@@ -68,7 +68,11 @@ const Forever = () => {
 
 
 </div>
-  
+<div className="pt-12 text-white flex md:flex-col md:hidden gap-4 " >
+      <a href="https://github.com/lukaChikashvili" target="_blank"> <Github size={30} className="cursor-pointer duration-500 ease hover:text-[#FFD700]"  /></a> 
+        <a href = "https://www.linkedin.com/in/luka-chikashvili/" target="_blank"><Linkedin size={30} className="cursor-pointer duration-500 ease hover:text-[#FFD700]"/></a>
+        <Mail size={30}className="cursor-pointer duration-500 ease hover:text-[#FFD700]" />
+      </div>
 </div>
   )
 }

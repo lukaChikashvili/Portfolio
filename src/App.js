@@ -129,11 +129,13 @@ useEffect(() => {
   return (
     <div className="App">
       <SmoothScroll>
-      <div className="fixed bottom-4 left-4 text-white hidden md:flex flex-col gap-4 " >
+
+      <div className="fixed bottom-4 left-4 text-white  hidden md:flex flex-col gap-4 " >
       <a href="https://github.com/lukaChikashvili" target="_blank"> <Github size={30} className="cursor-pointer duration-500 ease hover:text-[#FFD700]"  /></a> 
         <a href = "https://www.linkedin.com/in/luka-chikashvili/" target="_blank"><Linkedin size={30} className="cursor-pointer duration-500 ease hover:text-[#FFD700]"/></a>
         <Mail size={30}className="cursor-pointer duration-500 ease hover:text-[#FFD700]" />
       </div>
+
       <Header />
      <Home />
      <About />
