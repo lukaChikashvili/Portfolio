@@ -142,7 +142,7 @@ useEffect(() => {
     <MixMaster />
     <EternalMemories />
     <Forever />
-    <motion.div style={{left: smoothMouse.x, top: smoothMouse.y}} className="cursor"></motion.div>
+    <motion.div style={{left: smoothMouse.x, top: smoothMouse.y}} className="cursor hidden md:block"></motion.div>
     {showMenu && <button onClick={displayCards} 
     className="hidden md:block fixed z-10 bottom-4 right-8 text-white text-2xl duration-500 ease-in hover:text-[#FFD700]">{!showCards ? "Menu" : "X"}</button>}
 <AnimatePresence>
