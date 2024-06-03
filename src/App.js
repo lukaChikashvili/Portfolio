@@ -1,7 +1,7 @@
 import About from "./components/About";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import { ArrowBigLeft, Github, Linkedin, Mail, MoveLeft, MoveRight, Sun } from 'lucide-react';
+import { ArrowBigLeft, Github, Linkedin, Mail, Moon, MoveLeft, MoveRight, Sun } from 'lucide-react';
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import SmoothScroll from "./components/SmoothScroll";
@@ -144,7 +144,7 @@ useEffect(() => {
     <Forever />
     <motion.div style={{left: smoothMouse.x, top: smoothMouse.y}} className="cursor"></motion.div>
     {showMenu && <button onClick={displayCards} 
-    className="fixed z-10 bottom-4 right-8 text-white text-2xl duration-500 ease-in hover:text-[#FFD700]">{!showCards ? "Menu" : "X"}</button>}
+    className="hidden md:block fixed z-10 bottom-4 right-8 text-white text-2xl duration-500 ease-in hover:text-[#FFD700]">{!showCards ? "Menu" : "X"}</button>}
 <AnimatePresence>
 {showCards && (
 
@@ -168,7 +168,8 @@ useEffect(() => {
                      transition={{ duration: 1, delay: 0.8 }} 
 
           className='text-6xl text-[#FFD700] absolute bottom-12'>{texts[index]}</motion.h1>
-           <Sun onClick={toggleDarkMode} size={30} className="text-white absolute top-12 left-12 cursor-pointer duration-500 ease-in hover:text-[#FFD700] z-10" />
+           {!darkMode ? <Sun onClick={toggleDarkMode} size={30} className="text-white absolute top-12 left-12 cursor-pointer duration-500 ease-in hover:text-[#FFD700] z-10" />
+           : <Moon onClick={toggleDarkMode} size={30} className="text-white absolute top-12 left-12 cursor-pointer duration-500 ease-in hover:text-[#FFD700] z-10" /> }
    <div className="canvas-container">
               <Canvas className="canvas">
                 <Three />

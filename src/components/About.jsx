@@ -50,7 +50,7 @@ const About = () => {
          <motion.p initial = {{ opacity: 0, translateY: 20}}
                      whileInView={{ opacity: 1, translateY: 0 }}
                      transition={{type: 'spring', duration: 1.2, delay: 1.5 }} 
-         className='text-white text-3xl  pt-12'>Over the past few years, I have immersed myself in the exciting field of web development. I have honed my skills in HTML, CSS, JavaScript, and various modern frameworks and libraries such as React, Vue.js, and Node.js. Through self-directed projects, online courses, and coding bootcamps,
+         className='text-white text-3xl  pt-12'>Over the past  year, I have immersed myself in the exciting field of web development. I have honed my skills in HTML, CSS, JavaScript, and various modern frameworks and libraries such as React and Node.js. Through  projects, online courses,
              I have built a solid understanding of both front end and back end development.</motion.p>
              </div>
              <motion.p initial = {{ clipPath: 'polygon(0 0, 0 0, 0 100%, 0 100%)'}}

@@ -69,13 +69,13 @@ let ref = useRef();
 
     const enterAction = () => {
       if(index === 0) {
-        homeRef.current.material.color.set('#232D3F')
+        homeRef.current.material.color.set('#FFD95A')
       }else if(index === 1) {
-        aboutRef.current.material.color.set('#232D3F')
+        aboutRef.current.material.color.set('#FFD95A')
       }else if(index === 2) {
-        skillsRef.current.material.color.set('#232D3F')
+        skillsRef.current.material.color.set('#FFD95A')
       }else if(index === 3) {
-        projectsRef.current.material.color.set('#232D3F')
+        projectsRef.current.material.color.set('#FFD95A')
       }
    
     }
@@ -86,7 +86,7 @@ let ref = useRef();
       }else if(index === 1) {
         aboutRef.current.material.color.set('#F72798')
       }else if(index === 2) {
-        skillsRef.current.material.color.set('#FFD700')
+        skillsRef.current.material.color.set('#864AF9')
       }else if(index === 3) {
         projectsRef.current.material.color.set('#FF5F00')
       }
