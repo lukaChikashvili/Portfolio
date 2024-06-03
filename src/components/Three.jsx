@@ -7,7 +7,7 @@ import { useFrame } from '@react-three/fiber';
 const Three = () => {
 
  
-    const {index} = useContext(Context);
+    const {index, setShowCards} = useContext(Context);
     const [showBook, setShowBook] = useState(false);
     const [showTool, setShowTool] = useState(false);
     const [showProj, setShowProj] = useState(false);
@@ -67,6 +67,55 @@ let ref = useRef();
       
     })
 
+    const enterAction = () => {
+      if(index === 0) {
+        homeRef.current.material.color.set('#232D3F')
+      }else if(index === 1) {
+        aboutRef.current.material.color.set('#232D3F')
+      }else if(index === 2) {
+        skillsRef.current.material.color.set('#232D3F')
+      }else if(index === 3) {
+        projectsRef.current.material.color.set('#232D3F')
+      }
+   
+    }
+
+    const leaveAction = () => {
+      if(index === 0) {
+        homeRef.current.material.color.set('#8EAC50')
+      }else if(index === 1) {
+        aboutRef.current.material.color.set('#F72798')
+      }else if(index === 2) {
+        skillsRef.current.material.color.set('#FFD700')
+      }else if(index === 3) {
+        projectsRef.current.material.color.set('#FF5F00')
+      }
+   
+      
+    };
+
+
+    const showHome = () => {
+       setShowCards(false);
+       window.location.hash = "#home";
+    }
+
+    const showAbout = () => {
+      setShowCards(false);
+      window.location.hash = "#about";
+   }
+
+   const showSkills = () => {
+    setShowCards(false);
+    window.location.hash = "#skills";
+ }
+ 
+ const showProjects = () => {
+  setShowCards(false);
+  window.location.hash = "#projects";
+}
+
+   
     
   return (
    <>
@@ -87,7 +136,7 @@ shadow-camera-left={ - 10 }
 <pointLight position={[-10, -10, -10]} intensity={0.5} />
 <hemisphereLight skyColor={'#ffffff'} groundColor={'#b9b9b9'} intensity={0.9} />
 
-            <mesh scale-y = {4} scale-x = {3} rotation-x = {2.2} ref={homeRef} receiveShadow >
+            <mesh onPointerEnter={enterAction} onPointerLeave={leaveAction} onClick = {showHome} scale-y = {4} scale-x = {3} rotation-x = {2.2} ref={homeRef} receiveShadow >
               <boxGeometry />
               <meshStandardMaterial color = "#8EAC50" />
               <Center>
@@ -116,7 +165,7 @@ position = {[0, 0.2, 1]}  rotation-x={ 0.5 }  castShadow />
     blur={ 2.4 }
 />
 
-            <mesh  scale-y = {4} scale-x = {3} rotation-x = {2.2} position = {[6, 0, -5]} ref={aboutRef} castShadow>
+            <mesh onPointerEnter={enterAction} onPointerLeave={leaveAction} onClick = {showAbout}  scale-y = {4} scale-x = {3} rotation-x = {2.2} position = {[6, 0, -5]} ref={aboutRef} castShadow>
 
               <boxGeometry />
               <meshStandardMaterial color = "#F72798" />
@@ -128,7 +177,7 @@ position = {[0, 0.2, 1]}  rotation-x={ 0.5 }  castShadow />
               </Center>
             </mesh>
 
-            <mesh scale-y = {4} scale-x = {3} rotation-x = {2.2} position = {[12, 0, -10]} ref={skillsRef}  castShadow>
+            <mesh onPointerEnter={enterAction} onPointerLeave={leaveAction} onClick = {showSkills} scale-y = {4} scale-x = {3} rotation-x = {2.2} position = {[12, 0, -10]} ref={skillsRef}  castShadow>
               <boxGeometry />
               <meshStandardMaterial color = "#864AF9"/>
 
@@ -139,7 +188,7 @@ position = {[0, 0.2, 1]}  rotation-x={ 0.5 }  castShadow />
               </Center>
             </mesh>
 
-            <mesh scale-y = {4} scale-x = {3} rotation-x = {2.2} position = {[20, 0, -17]} ref={projectsRef}  castShadow>
+            <mesh onPointerEnter={enterAction} onPointerLeave={leaveAction} onClick = {showProjects} scale-y = {4} scale-x = {3} rotation-x = {2.2} position = {[20, 0, -17]} ref={projectsRef}  castShadow>
               <boxGeometry />
               <meshStandardMaterial color = "#FF5F00" />
 

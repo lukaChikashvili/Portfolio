@@ -8,7 +8,7 @@ import SmoothScroll from "./components/SmoothScroll";
 import MixMaster from "./components/MixMaster";
 import EternalMemories from "./components/EternalMemories";
 import Forever from "./components/Forever";
-import { motion, useMotionValue, useSpring } from 'framer-motion';
+import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
 import { useContext, useEffect, useState } from "react";
 import {Canvas} from '@react-three/fiber';
 import Three from "./components/Three";
@@ -20,8 +20,8 @@ import { Context } from "./context/Context";
 function App() {
 
   const [showMenu, setShowMenu] = useState(false);
-  const [showCards, setShowCards] = useState(false);
-
+  
+ const {showCards, setShowCards} = useContext(Context);
  
 
 
@@ -121,10 +121,14 @@ const handleLeftClick = () => {
     <Forever />
     <motion.div style={{left: smoothMouse.x, top: smoothMouse.y}} className="cursor"></motion.div>
     {showMenu && <button onClick={displayCards} 
-    className="fixed z-10 bottom-4 right-8 text-white text-2xl duration-500 ease-in hover:text-[#FFD700]">Menu</button>}
-
+    className="fixed z-10 bottom-4 right-8 text-white text-2xl duration-500 ease-in hover:text-[#FFD700]">{!showCards ? "Menu" : "X"}</button>}
+<AnimatePresence>
 {showCards && (
- <div className="card  fixed  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full min-h-screen  flex gap-24 justify-center items-center ">
+  
+ <motion.div initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
+ animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
+ transition={{ duration: 1, delay: 0.8 }} exit={{clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
+ className="card  fixed  left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full min-h-screen  flex gap-24 justify-center items-center ">
    <motion.h1 initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
                      animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1, delay: 0.8 }} 
@@ -133,8 +137,8 @@ const handleLeftClick = () => {
                      animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1.5, delay: 1.3 }} 
       className='w-full bg-white h-1 absolute top-36'></motion.div>
-      <MoveLeft className="absolute bottom-12 -ml-56 text-white z-10" size={60} onClick={handleLeftClick} />
-      <MoveRight className="absolute bottom-12 ml-56 text-white z-10 " size={60} onClick={handleRightClick} />
+      <MoveLeft className="absolute bottom-12 -ml-56 text-white z-10 cursor-pointer" size={60} onClick={handleLeftClick} />
+      <MoveRight className="absolute bottom-12 ml-56 text-white z-10 cursor-pointer " size={60} onClick={handleRightClick} />
 <motion.h1 initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
                      animate={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                     
@@ -148,9 +152,10 @@ const handleLeftClick = () => {
             </div>
 
 
-</div>
-)}
+</motion.div>
 
+)}
+</AnimatePresence>
 
 
 

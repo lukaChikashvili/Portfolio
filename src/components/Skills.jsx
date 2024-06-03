@@ -32,7 +32,7 @@ const Skills = () => {
 
 
   return (
-    <div className='min-h-screen p-28'>
+    <section id = "skills" className='min-h-screen p-28'>
        <motion.h1 initial = {{ clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)'}}
                      whileInView={{ clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0 100%)' }}
                      transition={{ duration: 1, delay: 0.8 }} 
@@ -48,7 +48,7 @@ const Skills = () => {
           <img key = {i} src = {value.img} className='w-full md:w-24 object-cover'/>
        ))}
       </motion.div>
-    </div>
+    </section>
   )
 }
 
