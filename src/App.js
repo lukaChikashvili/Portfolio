@@ -191,7 +191,7 @@ useEffect(() => {
       <SmoothScroll>
 
       <button onClick={startListening} className=' btn md:fixed text-white right-8 top-10 '><Mic size={30} className="hidden md:block duration-500 ease-in hover:text-[#FFD700]" /></button>
-      <h2 className="text-[#FFD700] font-bold fixed bottom-12 text-4xl left-1/2">{text}</h2>
+      <h2 className="text-[#FFD700] font-bold fixed bottom-12 text-4xl left-1/2 mr-12">{text}</h2>
         
       <div className="fixed bottom-4 left-4 text-white  hidden md:flex flex-col gap-4 " >
       <a href="https://github.com/lukaChikashvili" target="_blank"> <Github size={30} className="cursor-pointer duration-500 ease hover:text-[#FFD700]"  /></a> 
