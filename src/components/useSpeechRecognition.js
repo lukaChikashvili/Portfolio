@@ -17,7 +17,7 @@ const useSpeechRecognition = () => {
     if (!recognition) return;
 
     recognition.onresult = (event) => {
-      setText(event.results[0][0].transcript);
+      setText(event.results[0][0].transcript.toLowerCase());
       if (event.results[0][0].transcript.includes('scroll')) {
         const pixels = parseInt(event.results[0][0].transcript.replace(/[^0-9]/g, ''), 800) || 800; 
         window.scrollBy({ top: pixels, behavior: 'smooth' });

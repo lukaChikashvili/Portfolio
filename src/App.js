@@ -153,15 +153,15 @@ useEffect(() => {
     setShowCards(true);
    }else if(text === "github") {
     window.open('https://github.com/lukaChikashvili', '_blank');
-   }else if(text === "LinkedIn") {
+   }else if(text === "linkedin") {
     window.open('https://www.linkedin.com/in/luka-chikashvili/', '_blank');
-   }else if(text === "Neo writers github") {
+   }else if(text === "neo writers github") {
     window.open("https://github.com/lukaChikashvili/neoWriters2", "_blank");
-   }else if(text === "Neo writers live") {
+   }else if(text === "neo writers live") {
     window.open("https://neowriters-front.onrender.com", "_blank");
-   }else if(text === "mixmaster github") {
+   }else if(text === "mix master github" || text === "mixmaster github") {
     window.open("https://github.com/lukaChikashvili/MixMaster", "_blank");
-   }else if(text === "mixmaster live") {
+   }else if(text === "mix master live" || text === "mixmaster live") {
     window.open("https://mix-master-seven.vercel.app/", "_blank");
    }else if(text === "eternal memories github") {
     window.open("https://github.com/lukaChikashvili/EternalMemories", "_blank");
