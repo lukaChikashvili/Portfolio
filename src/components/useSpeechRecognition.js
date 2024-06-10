@@ -18,6 +18,11 @@ const useSpeechRecognition = () => {
 
     recognition.onresult = (event) => {
       setText(event.results[0][0].transcript);
+      if (event.results[0][0].transcript.includes('scroll')) {
+        const pixels = parseInt(event.results[0][0].transcript.replace(/[^0-9]/g, ''), 800) || 800; 
+        window.scrollBy({ top: pixels, behavior: 'smooth' });
+      }
+      
       recognition.stop();
       setIsListening(false);
     };

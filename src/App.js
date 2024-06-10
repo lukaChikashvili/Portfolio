@@ -149,14 +149,48 @@ useEffect(() => {
     window.location.hash = "#skills";
    }else if(text === "projects") {
     window.location.hash = "#projects";
+   }else if(text === "menu") {
+    setShowCards(true);
+   }else if(text === "github") {
+    window.open('https://github.com/lukaChikashvili', '_blank');
+   }else if(text === "LinkedIn") {
+    window.open('https://www.linkedin.com/in/luka-chikashvili/', '_blank');
+   }else if(text === "Neo writers github") {
+    window.open("https://github.com/lukaChikashvili/neoWriters2", "_blank");
+   }else if(text === "Neo writers live") {
+    window.open("https://neowriters-front.onrender.com", "_blank");
+   }else if(text === "mixmaster github") {
+    window.open("https://github.com/lukaChikashvili/MixMaster", "_blank");
+   }else if(text === "mixmaster live") {
+    window.open("https://mix-master-seven.vercel.app/", "_blank");
+   }else if(text === "eternal memories github") {
+    window.open("https://github.com/lukaChikashvili/EternalMemories", "_blank");
+   }else if(text === "eternal memories live") {
+    window.open("https://eternal-memories.onrender.com/", "_blank");
    }
-})
+});
+
+
+
+useEffect(() => {
+  const handleKeyDown = (event) => {
+    if (event.code === 'KeyM') {
+      startListening();
+    }
+  };
+
+  window.addEventListener('keydown', handleKeyDown);
+
+  return () => {
+    window.removeEventListener('keydown', handleKeyDown);
+  };
+}, [startListening]);
  
   return (
     <div className="App">
       <SmoothScroll>
 
-      <button onClick={startListening} className='btn fixed text-white right-8 top-10 '><Mic size={30} className="duration-500 ease-in hover:text-[#FFD700]" /></button>
+      <button onClick={startListening} className=' btn md:fixed text-white right-8 top-10 '><Mic size={30} className="hidden md:block duration-500 ease-in hover:text-[#FFD700]" /></button>
       <h2 className="text-[#FFD700] font-bold fixed bottom-12 text-4xl left-1/2">{text}</h2>
         
       <div className="fixed bottom-4 left-4 text-white  hidden md:flex flex-col gap-4 " >
