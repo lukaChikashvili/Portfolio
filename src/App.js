@@ -1,7 +1,7 @@
 import About from "./components/About";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import { ArrowBigLeft, Github, Linkedin, Mail, Moon, MoveLeft, MoveRight, Sun } from 'lucide-react';
+import { ArrowBigLeft, Github, Linkedin, Mail, Mic, Moon, MoveLeft, MoveRight, Sun } from 'lucide-react';
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import SmoothScroll from "./components/SmoothScroll";
@@ -13,17 +13,28 @@ import { useContext, useEffect, useRef, useState } from "react";
 import {Canvas} from '@react-three/fiber';
 import Three from "./components/Three";
 import { Context } from "./context/Context";
+import useSpeechRecognition from "./components/useSpeechRecognition";
+
 
 
 
 
 function App() {
 
+  // speech recognition
+  const {
+    text, startListening
+ } = useSpeechRecognition();
+
+
+
   const [showMenu, setShowMenu] = useState(false);
   
  const {showCards, setShowCards} = useContext(Context);
  
  const [darkMode, setDarkMode] = useState(false);
+
+
 
  let menuRef = useRef();
 
@@ -125,11 +136,29 @@ useEffect(() => {
   const data = localStorage.getItem('darkMode');
   setDarkMode(JSON.parse(data));
 }, []); 
+
+
+
+// control with voice
+useEffect(() => {
+   if(text === "about") {
+     window.location.hash = "#about";
+   }else if(text === "home") {
+    window.location.hash = "#home";
+   }else if(text === "skills") {
+    window.location.hash = "#skills";
+   }else if(text === "projects") {
+    window.location.hash = "#projects";
+   }
+})
  
   return (
     <div className="App">
       <SmoothScroll>
 
+      <button onClick={startListening} className='btn fixed text-white right-8 top-10 '><Mic size={30} className="duration-500 ease-in hover:text-[#FFD700]" /></button>
+      <h2 className="text-[#FFD700] font-bold fixed bottom-12 text-4xl left-1/2">{text}</h2>
+        
       <div className="fixed bottom-4 left-4 text-white  hidden md:flex flex-col gap-4 " >
       <a href="https://github.com/lukaChikashvili" target="_blank"> <Github size={30} className="cursor-pointer duration-500 ease hover:text-[#FFD700]"  /></a> 
         <a href = "https://www.linkedin.com/in/luka-chikashvili/" target="_blank"><Linkedin size={30} className="cursor-pointer duration-500 ease hover:text-[#FFD700]"/></a>
