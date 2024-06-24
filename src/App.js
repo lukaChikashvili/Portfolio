@@ -14,6 +14,7 @@ import {Canvas} from '@react-three/fiber';
 import Three from "./components/Three";
 import { Context } from "./context/Context";
 import useSpeechRecognition from "./components/useSpeechRecognition";
+import CircusMircus from "./components/CircusMircus";
 
 
 
@@ -206,6 +207,7 @@ useEffect(() => {
      <Projects />
     <MixMaster />
     <EternalMemories />
+    <CircusMircus />
     <Forever />
     <motion.div style={{left: smoothMouse.x, top: smoothMouse.y}} className="cursor hidden md:block"></motion.div>
     {showMenu && <button onClick={displayCards} 
